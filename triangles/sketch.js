@@ -1,6 +1,9 @@
 
 let triangles = []
 
+
+
+
 function setup() {
   // put setup code here
   createCanvas(windowWidth, windowHeight)
@@ -17,6 +20,10 @@ function draw() {
     vertex(getRandomArbitrary(0, windowWidth), getRandomArbitrary(0, windowHeight));
   }
   endShape(CLOSE);
+
+  
+
+
 }
 
 
@@ -29,7 +36,7 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-class Heart {
+class Triangle {
   constructor() {
       
       this.x = Math.random()*1500;

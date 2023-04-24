@@ -1,6 +1,6 @@
 var input;
 var output;
-var inputBase;
+var nameInput;
 var outputBase;
 var correctInput = true;
 var correctInputBase = true;
@@ -17,8 +17,8 @@ function setup() {
 
 
   text("Input Number base ",windowWidth/2-200,windowHeight/2-50);
-  inputBase = createInput();
-  inputBase.position(windowWidth/2,windowHeight/2-70);
+  nameInput = createInput();
+  nameInput.position(windowWidth/2,windowHeight/2-70);
 
   text("Output Number base ",windowWidth/2-200,windowHeight/2);
   outputBase = createInput();
@@ -43,7 +43,7 @@ function calculate()
   output = "";
 
   
-  var inputBaseIn = inputBase.value();
+  var inputBaseIn = nameInput.value();
   if(inputBaseIn<=1 || inputBaseIn > 16)
   {
     correctInputBase = false;
