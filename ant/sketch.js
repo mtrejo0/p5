@@ -1,161 +1,90 @@
-
-var maze = {};
-var size;
-var originBFS = [0,0];
-var color = "white";
-var h;
-var w;
-var pos,dir;
-var loop ;
-var step;
-
+let grid = [];
+let resolution;
+let ant;
+let loop = true;
 
 function setup() {
-  
-  createCanvas(windowWidth,windowHeight);
-  size =windowHeight/80;
-  loop = true;
-  step = 0;
-  h = (windowHeight-10)/size|0;
-  w = (windowWidth-10)/size|0;
-  h--;
-  w--;
-  
+  createCanvas(windowWidth, windowHeight);
+  resolution = 10;
+  const rows = height / resolution;
+  const cols = width / resolution;
 
-  
-  
-  for (var i = h; i >= 0; i--) {
-      for (var j = w; j >= 0; j--) {
-        maze[i.toString()+","+j.toString()] = 0;
-      }
+  for (let i = 0; i < rows; i++) {
+    const row = [];
+    for (let j = 0; j < cols; j++) {
+      row.push(0);
+    }
+    grid.push(row);
   }
-  
-  pos = createVector(w/2|0,h/2|0);
-  
-  dir = createVector(-1,0);
-  
-  
 
+  ant = {
+    x: floor(cols / 2),
+    y: floor(rows / 2),
+    dir: createVector(0, -1),
+  };
 }
 
-function mousePressed()
-{
-  loop = !loop;
+function updateAnt() {
+  const { x, y, dir } = ant;
+
+  if (grid[y][x] === 0) {
+    grid[y][x] = 1;
+    ant.dir.rotate(-HALF_PI);
+  } else {
+    grid[y][x] = 0;
+    ant.dir.rotate(HALF_PI);
+  }
+
+  ant.x += ant.dir.x;
+  ant.y += ant.dir.y;
+
+  if (ant.x < 0) ant.x = grid[0].length - 1;
+  if (ant.x >= grid[0].length) ant.x = 0;
+  if (ant.y < 0) ant.y = grid.length - 1;
+  if (ant.y >= grid.length) ant.y = 0;
 }
+
+function mouseClicked() {
+  const x = floor(mouseX / resolution);
+  const y = floor(mouseY / resolution);
+
+  if (x >= 0 && x < grid[0].length && y >= 0 && y < grid.length) {
+    grid[y][x] = grid[y][x] === 0 ? 1 : 0;
+  }
+}
+
+
+function keyPressed() {
+  if (key === " ") {
+    loop = !loop;
+  }
+}
+
 function draw() {
-  if(loop){
-   
-  
+  if (!loop) return;
 
-    if(step==0)
-    {
-      var x = originBFS[0];
-      var y = originBFS[1];
+  background(255);
 
-      for (var i = 0; i < h+1 ; i++) {
-        for (var j = 0; j < w+1; j++) {
-          fill("white");
-          rect(x,y,size,size)
-          x= x+size;
-        }
-        y+=size ;
-        x = originBFS[0];
+  for (let i = 0; i < grid.length; i++) {
+    for (let j = 0; j < grid[i].length; j++) {
+      const x = j * resolution;
+      const y = i * resolution;
+
+      if (grid[i][j] === 1) {
+        fill(0);
+        rect(x, y, resolution, resolution);
       }
+
+      noFill();
+      stroke(200);
+      rect(x, y, resolution, resolution);
     }
-    
-    if(maze[pos.y.toString()+","+pos.x.toString()]==0)
-    {
-      maze[pos.y.toString()+","+pos.x.toString()]=1;
-      fill("black");
-      rect(pos.x*size,pos.y*size,size,size)
-      dir = left(dir);
-      pos = createVector(pos.x+dir.x,pos.y+dir.y);
-      fill("green");
-      rect(pos.x*size,pos.y*size,size,size)
-
-    }
-    else
-    {
-      if(maze[pos.y.toString()+","+pos.x.toString()]==1)
-      {
-       maze[pos.y.toString()+","+pos.x.toString()]=0;
-        fill("white");
-        rect(pos.x*size,pos.y*size,size,size)
-        dir = right (dir);
-        pos = createVector(pos.x+dir.x,pos.y+dir.y);
-
-        fill("green");
-        rect(pos.x*size,pos.y*size,size,size)
-
-      }
-    }
-    
-    
-    if(pos.x >   w)
-    {
-      noLoop();
-    }
-    if(pos.x<0)
-    {
-      noLoop();
-    }
-
-    if(pos.y > h)
-    {
-      noLoop();
-    }
-    if(pos.y<0)
-    {
-      noLoop();
-    }
-  step++;
-
-    
-
-
-    
-
-
-
   }
- 
-}
 
-function right(dir)
-{
-  if(dir.x == 1 && dir.y == 0)
-  {
-    return createVector(0,-1);
-  }
-  if(dir.x == 0 && dir.y == 1)
-  {
-    return createVector(1,0);
-  }
-  if(dir.x == -1 && dir.y == 0)
-  {
-    return createVector(0,1);
-  }
-  if(dir.x == 0 && dir.y == -1)
-  {
-    return createVector(-1,0);
-  }
-}
-function left(dir)
-{
-  if(dir.x == 1 && dir.y == 0)
-  {
-    return createVector(0,1);
-  }
-  if(dir.x == 0 && dir.y == 1)
-  {
-    return createVector(-1,0);
-  }
-  if(dir.x == -1 && dir.y == 0)
-  {
-    return createVector(0,-1);
-  }
-  if(dir.x == 0 && dir.y == -1)
-  {
-    return createVector(1,0);
-  }
+  const antX = ant.x * resolution;
+  const antY = ant.y * resolution;
+  fill("green");
+  rect(antX, antY, resolution, resolution);
+
+  updateAnt();
 }

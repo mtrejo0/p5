@@ -162,7 +162,7 @@ function keyPressed() {
 function Bullet()
 {
   this.pos = createVector(rocket.pos.x,rocket.pos.y);
-  this.vel = createVector(cos(rocket.theta),sin(rocket.theta));
+  this.vel = createVector(rocket.vel.x/10 + cos(rocket.theta), rocket.vel.y/10 + sin(rocket.theta));
   this.vel.mult(10);
   this.acc = createVector(0,0);
   
@@ -331,7 +331,6 @@ function Rocket(x,y)
     rotate(this.theta)
   	
     beginShape();
-    console.log("ok")
     vertex(10, 0);
     vertex(-10, -5);
     vertex(-10, 5);
