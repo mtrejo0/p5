@@ -7,15 +7,15 @@ var timeDomainData = new Uint8Array(200);
 
 let theta = 0
 
-// let mic;
+let mic;
 function setup() {
   createCanvas(windowWidth, windowHeight)
 
   arr = []
   arr.push(Math.random())
 
-  // mic = new p5.AudioIn()
-  // mic.start()
+  mic = new p5.AudioIn()
+  mic.start()
 
   // var speaker = new MediaStream;
 
@@ -67,21 +67,21 @@ function setup() {
   // } catch(e) {
   //   alert('web audio api not supported');
   // }
-  context = new AudioContext();
-  analyser = context.createAnalyser();
-  analyser.fftsize = 512;
-  analyser.smoothingTimeConstant = 0.9;
-  navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-  navigator.getMedia({
-      audio: true,
-      video: false
-  }, function (localMediaStream) {
-      source = context.createMediaStreamSource(localMediaStream);
-      console.log(source);
-      source.connect(analyser);
-  }, function (err) {
-      console.log(err);
-  });
+  // context = new AudioContext();
+  // analyser = context.createAnalyser();
+  // analyser.fftsize = 512;
+  // analyser.smoothingTimeConstant = 0.9;
+  // navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+  // navigator.getMedia({
+  //     audio: true,
+  //     video: false
+  // }, function (localMediaStream) {
+  //     source = context.createMediaStreamSource(localMediaStream);
+  //     console.log(source);
+  //     source.connect(analyser);
+  // }, function (err) {
+  //     console.log(err);
+  // });
   
 }
 
