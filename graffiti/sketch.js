@@ -103,7 +103,7 @@ function drawBackground() {
       let adjustedBrickWidth = x + brickWidth > width ? width - x : brickWidth;
 
       // Draw the brick
-      fill(173, 98, 65); // Brick color
+      fill(173, 98, 65, 255-(i*j)%10); // Brick color
       stroke(99, 49, 33); // Brick border color
       rect(x, y, adjustedBrickWidth, brickHeight);
     }
