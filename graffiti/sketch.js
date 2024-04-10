@@ -119,7 +119,7 @@ function redrawCanvas() {
         let nextPoint = path[i + 1];
         
         stroke(point.color[0], point.color[1], point.color[2]);
-        strokeWeight(point.size);
+        strokeWeight(point.size * (1 + ((path[i].x*path[i].y) % 100)/200));
         line(point.x, point.y, nextPoint.x, nextPoint.y);
       }
     }
