@@ -7,6 +7,8 @@ let t = 0
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
+  
+
   // generate stars
   for (let i = 0; i < 100; i++) {
     stars.push({x: Math.random() * windowWidth, y: Math.random() * windowHeight, r: Math.random() * 5})
@@ -14,12 +16,12 @@ function setup() {
 
   // initial turtles
   for (let i = 0; i < 20; i++) {
-    turtles.push(new Turtle(windowWidth/2, windowHeight/2 + i * 100, i /100))
+    turtles.push(new Turtle(windowWidth/2, windowHeight/2 + i * 50, i / 100))
   } 
 
   turtles[0].earth = true
 
-  colorMode(HSB)
+  
   
 }
 
@@ -49,11 +51,14 @@ function draw() {
     
   }
 
+  push()
+  colorMode(HSB)
   fill(t%255, 255,255)
   textSize(32)
   text("TURTLES ALL THE WAY DOWN", windowWidth/2 + 200 , 100)
+  pop()
 
-  if (t % 10 == 0) {
+  if (t % 5 == 0) {
     turtles.push(new Turtle( windowWidth/2, windowHeight + 100, t))
   }
   t += 1
@@ -85,45 +90,46 @@ class Turtle {
       strokeWeight(0)
 
       // Draw continents
-  fill("green"); // Continent color
+      fill("green"); // Continent color
 
-  // Continent 1
-  beginShape();
-  curveVertex(this.pos.x - 40, this.pos.y + 10);
-  curveVertex(this.pos.x - 30, this.pos.y - 10);
-  curveVertex(this.pos.x - 20, this.pos.y - 30);
-  curveVertex(this.pos.x-10, this.pos.y - 10);
-  curveVertex(this.pos.x - 15, this.pos.y + 20);
-  endShape(CLOSE);
+      // Continent 1
+      beginShape();
+      curveVertex(this.pos.x - 40, this.pos.y + 10);
+      curveVertex(this.pos.x - 30, this.pos.y - 10);
+      curveVertex(this.pos.x - 20, this.pos.y - 30);
+      curveVertex(this.pos.x-10, this.pos.y - 10);
+      curveVertex(this.pos.x - 15, this.pos.y + 20);
+      endShape(CLOSE);
 
-  // Continent 2
-  beginShape();
-  curveVertex(this.pos.x + 10, this.pos.y - 20);
-  curveVertex(this.pos.x + 20, this.pos.y - 40);
-  curveVertex(this.pos.x + 40, this.pos.y - 20);
-  curveVertex(this.pos.x + 30, this.pos.y + 10);
-  curveVertex(this.pos.x + 15, this.pos.y + 20);
-  endShape(CLOSE);
+      // Continent 2
+      beginShape();
+      curveVertex(this.pos.x + 10, this.pos.y - 20);
+      curveVertex(this.pos.x + 20, this.pos.y - 40);
+      curveVertex(this.pos.x + 40, this.pos.y - 20);
+      curveVertex(this.pos.x + 30, this.pos.y + 10);
+      curveVertex(this.pos.x + 15, this.pos.y + 20);
+      endShape(CLOSE);
 
-  // Continent 3
-  beginShape();
-  curveVertex(this.pos.x + 5, this.pos.y + 10);
-  curveVertex(this.pos.x + 15, this.pos.y + 30);
-  curveVertex(this.pos.x + 25, this.pos.y + 20);
-  curveVertex(this.pos.x + 20, this.pos.y + 5);
-  curveVertex(this.pos.x + 10, this.pos.y);
-  endShape(CLOSE);
+      // Continent 3
+      beginShape();
+      curveVertex(this.pos.x + 5, this.pos.y + 10);
+      curveVertex(this.pos.x + 15, this.pos.y + 30);
+      curveVertex(this.pos.x + 25, this.pos.y + 20);
+      curveVertex(this.pos.x + 20, this.pos.y + 5);
+      curveVertex(this.pos.x + 10, this.pos.y);
+      endShape(CLOSE);
 
-  // Draw clouds
-  fill(255, 255, 255, 150); // Cloud color (semi-transparent white)
-  ellipse(this.pos.x + 20, this.pos.y - 20, 30, 20);
-  ellipse(this.pos.x - 30, this.pos.y, 40, 20);
+      // Draw clouds
+      fill(255, 255, 255, 150); // Cloud color (semi-transparent white)
+      ellipse(this.pos.x + 20, this.pos.y - 20, 30, 20);
+      ellipse(this.pos.x - 30, this.pos.y, 40, 20);
 
-  // Reset drawing settings
-  noStroke();
+      // Reset drawing settings
+      noStroke();
 
       return
     }
+    console.log(this.color)
     fill(this.color);
     strokeWeight(5)
     stroke(0)
