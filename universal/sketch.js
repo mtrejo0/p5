@@ -1,6 +1,7 @@
 let stars = []
 let img;
 let eyesEmoji;
+let squiggles = [];
 
 function preload() {
   img = loadImage('nature.jpeg'); // Replace with the path to your image
@@ -21,6 +22,43 @@ function drawSpace() {
   background(0)
   stars.forEach(star => {
     ellipse(star.x, star.y, star.r)
+  });
+}
+
+function drawRainbowSquiggles(mask) {
+  squiggles.push({
+    paths: [],
+    color: color(random(255), random(255), random(255)),
+    weight: random(2, 5),
+    lifetime: 30 // frames before fading
+  });
+
+  let newSquiggle = squiggles[squiggles.length - 1];
+  let x = Math.random() * windowWidth;
+  let y = Math.random() * windowHeight;
+
+  for (let j = 0; j < 6; j++) {
+    x += random(-15, 15);
+    y += random(-15, 15);
+    newSquiggle.paths.push({x, y});
+  }
+
+  squiggles.forEach((squiggle, index) => {
+    mask.stroke(squiggle.color);
+    mask.strokeWeight(squiggle.weight);
+    mask.push();
+    mask.noFill();
+    mask.beginShape();
+    squiggle.paths.forEach(p => {
+      mask.vertex(p.x, p.y);
+    });
+    mask.endShape();
+    mask.pop();
+
+    squiggle.lifetime--;
+    if (squiggle.lifetime <= 0) {
+      squiggles.splice(index, 1);
+    }
   });
 }
 
@@ -45,6 +83,7 @@ function draw() {
   stars.forEach(star => {
     mask.ellipse(star.x, star.y, star.r);
   });
+  drawRainbowSquiggles(mask); // Draw rainbow squiggles on the mask
   mask.erase();
   mask.triangle(centerX, centerY, adjacentX, adjacentY, adjacentX2, adjacentY2);
   
