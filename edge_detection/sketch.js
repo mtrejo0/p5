@@ -42,38 +42,35 @@ function grayScale() {
 }
 
 function edgeDetection(k) {
-
-  console.log(k)
-  let imgCopy = img.get();
+  let imgCopy = createImage(img.width, img.height);
   imgCopy.loadPixels();
   img.loadPixels();
   
   const r = Math.floor(k.length / 2);
+  const w = img.width;
+  const h = img.height;
 
-  for (let i = 0; i < img.width; i++) {
-    for (let j = 0; j < img.height; j++) {
+  for (let i = 0; i < w; i++) {
+    for (let j = 0; j < h; j++) {
       let sum = 0;
+      const outIndex = (i + j * w) * 4;
 
       for (let ii = 0; ii < k.length; ii++) {
         for (let jj = 0; jj < k.length; jj++) {
-          const x = constrain(i - r + ii, 0, img.width - 1);
-          const y = constrain(j - r + jj, 0, img.height - 1);
-
-          let index = (x + y * img.width) * 4;
-          let pValue = img.pixels[index];
-
-          sum += pValue * k[ii][jj];
+          const x = constrain(i - r + ii, 0, w - 1);
+          const y = constrain(j - r + jj, 0, h - 1);
+          const index = (x + y * w) * 4;
+          sum += img.pixels[index] * k[ii][jj];
         }
       }
 
-      let outIndex = (i + j * img.width) * 4;
-      imgCopy.pixels[outIndex] = sum;
-      imgCopy.pixels[outIndex + 1] = sum;
-      imgCopy.pixels[outIndex + 2] = sum;
+      imgCopy.pixels[outIndex] = imgCopy.pixels[outIndex + 1] = imgCopy.pixels[outIndex + 2] = sum;
       imgCopy.pixels[outIndex + 3] = 255;
     }
+    console.log(i/w * 100)
   }
 
+  console.log("finished");
   imgCopy.updatePixels();
   img = imgCopy;
 }
