@@ -515,36 +515,11 @@ let cap;
 let showCap = true;
 let tapper = new Tapper()
 function setup() {
-  // put setup code here
-  
-
-  createCanvas(windowWidth, windowHeight)
-
+  createCanvas(windowWidth, windowHeight);
   textSize(30);
 
-  // vid = createVideo(
-  //   ['titanium.mp4']
-  // );
-  // vid = createVideo(
-  //   ['delic.mp4']
-  // );
-
-  // vid.loop()
-  // vid.size(windowWidth, windowHeight)
-  // vid.volume(0);
-  // vid.play();
-
-
-  // img = loadImage('onemoretime.png');
-
-  // cap = createCapture(VIDEO);
-  // cap.hide();
-
-  // mic = new p5.AudioIn()
-  // mic.start()
-
-
-
+  cap = createCapture(VIDEO);
+  cap.hide();
 
   console.log(", - halves the bpm\n\
 . - doubles the bpm\n\
@@ -555,19 +530,22 @@ function setup() {
 4 - toggles center circle\n\
 up/down - changes bpm +/- 5\n\
 left/right - changes bpm +/- 1\n\
-spacebar - tap for the program to learn the BPM you are tapping at")
-
-
-
-
+spacebar - tap for the program to learn the BPM you are tapping at");
 }
 
 let levels = []
 function draw() {
+  // Display the webcam feed as background
+  
 
+  if (frameCount % 2 == 0) {
+    image(cap, 0, 0, windowWidth, windowHeight);
+  }
 
+  
 
   background(0, 120 * 4/bpm_controller.bpm);
+
 
   // if (showCap) {
   //   image(cap, 0, 0, windowWidth, windowHeight);
