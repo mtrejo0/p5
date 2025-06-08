@@ -12,6 +12,7 @@ const rainbowColors = [
 
 let frequencySlider;
 let growthSlider;
+let colorCheckboxes = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -25,6 +26,15 @@ function setup() {
   growthSlider = createSlider(1.001, 1.1, 1.05, 0.001);
   growthSlider.position(20, 60);
   growthSlider.style('width', '200px');
+  
+  // Create color checkboxes
+  const colorNames = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+  for (let i = 0; i < rainbowColors.length; i++) {
+    let checkbox = createCheckbox(colorNames[i], true);
+    checkbox.position(20, 100 + i * 25);
+    checkbox.style('color', 'white');
+    colorCheckboxes.push(checkbox);
+  }
 }
 
 function draw() {
@@ -57,13 +67,32 @@ function draw() {
   text(`Growth Speed: ${growthSlider.value().toFixed(3)}`, 20, 55);
 }
 
+function getNextAvailableColor() {
+  // Get list of enabled colors
+  let availableColors = [];
+  for (let i = 0; i < colorCheckboxes.length; i++) {
+    if (colorCheckboxes[i].checked()) {
+      availableColors.push(rainbowColors[i]);
+    }
+  }
+  
+  // If no colors are enabled, default to white
+  if (availableColors.length === 0) {
+    return '#FFFFFF';
+  }
+  
+  // Return next available color in sequence
+  let color = availableColors[colorIndex % availableColors.length];
+  colorIndex++;
+  return color;
+}
+
 class Circle {
   constructor() {
     this.x = windowWidth / 2;
     this.y = windowHeight / 2;
     this.radius = 1;
-    this.color = rainbowColors[colorIndex % rainbowColors.length];
-    colorIndex++;
+    this.color = getNextAvailableColor();
   }
   
   update() {
