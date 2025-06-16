@@ -1,10 +1,15 @@
-
 var notes = [60, 62, 64, 65, 66, 69, 71]
 var osc;
+var audioStarted = false;
 
 var n = 0
 // A function to play a note
 function playNote(note, duration) {
+  if (!audioStarted) {
+    userStartAudio();
+    audioStarted = true;
+  }
+  
   osc.freq(midiToFreq(note));
   // Fade it in
   osc.fade(0.5,0.2);
@@ -39,7 +44,14 @@ function setup() {
   // Start silent
   osc.start();
   osc.amp(0);
+}
 
+// Add mousePressed to start audio context
+function mousePressed() {
+  if (!audioStarted) {
+    userStartAudio();
+    audioStarted = true;
+  }
 }
 
 function draw() {
