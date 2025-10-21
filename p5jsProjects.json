@@ -602,6 +602,15 @@
     "date": "2025-10-21"
   },
   {
+    "name": "Rock Paper Scissors Simulation",
+    "emoji": "✊🖐✌️",
+    "description": [
+      "Hundreds of rock, paper, and scissors emojis bounce and convert each other on collision, following RPS rules. Watch populations evolve in real time with animated graphs and stats tracking."
+    ],
+    "id": "rock_paper_scissors",
+    "date": "2025-10-21"
+  },
+  {
     "name": "Vector Field",
     "emoji": "🧲",
     "description": [
@@ -610,4 +619,3 @@
     "id": "field",
     "date": "2025-10-21"
   }
-]
