@@ -1,7 +1,8 @@
 // Three.js White Scene
 let scene, camera, renderer;
 let butterflies = [];
-let maxButterflies = 100;
+let maxButterflies = 200;
+let starDust = []; // Array to store star dust particles
 
 function setup() {
   // Create fullscreen canvas
@@ -17,9 +18,19 @@ function setup() {
 }
 
 function draw() {
-  // Update all butterflies
+  background(0)
+  // Update all butterflies and create star dust
   for (let i = butterflies.length - 1; i >= 0; i--) {
     butterflies[i].update();
+    
+    // Create star dust particles occasionally
+    if (Math.random() < 0.3) { // 30% chance each frame
+      starDust.push(new StarDustParticle(
+        butterflies[i].position.x,
+        butterflies[i].position.y,
+        butterflies[i].position.z
+      ));
+    }
     
     // Remove butterflies that reach the top (y > 4) and add new ones
     if (butterflies[i].position.y > 4) {
@@ -28,6 +39,16 @@ function draw() {
       
       // Add a new butterfly to replace the removed one
       butterflies.push(new Butterfly());
+    }
+  }
+  
+  // Update and remove old star dust particles
+  for (let i = starDust.length - 1; i >= 0; i--) {
+    starDust[i].update();
+    
+    if (starDust[i].isDead()) {
+      scene.remove(starDust[i].mesh);
+      starDust.splice(i, 1);
     }
   }
 
@@ -72,8 +93,8 @@ class Butterfly {
   constructor() {
     this.group = new THREE.Group();
     this.position = { 
-      x: (Math.random() - 0.5) * 8, 
-      y: -5 + Math.random()*2, // Start at bottom of screen
+      x: (Math.random() - 0.5) * 20, 
+      y: -10 + Math.random()*5, // Start at bottom of screen
       z: (Math.random() - 0.5) * 2 
     };
     this.velocity = { 
@@ -182,6 +203,54 @@ class Butterfly {
     // Periodic body rotation - butterfly tilts and rolls periodically
     this.group.rotation.x = Math.sin(this.time ) * 0.3; // Pitch rotation
     this.group.rotation.z = Math.cos(this.time) * 0.2; // Roll rotation
+  }
+}
+
+class StarDustParticle {
+  constructor(x, y, z) {
+    this.life = 1.0; // Full opacity
+    this.position = {
+      x: x + (Math.random() - 0.5) * 0.1, // Slight random offset
+      y: y + (Math.random() - 0.5) * 0.1,
+      z: z + (Math.random() - 0.5) * 0.1
+    };
+    
+    // Create a small white sphere with shimmer
+    const geometry = new THREE.SphereGeometry(0.015, .1, .1);
+    const material = new THREE.MeshBasicMaterial({ 
+      color: 0xffffff,
+      transparent: true,
+      opacity: 1.0
+    });
+    
+    this.mesh = new THREE.Mesh(geometry, material);
+    this.mesh.position.set(this.position.x, this.position.y, this.position.z);
+    scene.add(this.mesh);
+    
+    // Random shimmer phase
+    this.shimmerPhase = Math.random() * Math.PI * 2;
+  }
+  
+  update() {
+    // Fade out over time
+    this.life -= 0.01;
+    
+    // Shimmer effect - subtle pulsing
+    const shimmer = 0.7 + Math.sin(this.shimmerPhase + Date.now() * 0.01) * 0.3;
+    
+    // Update opacity with shimmer
+    this.mesh.material.opacity = this.life * shimmer;
+    
+    // Slowly drift downward and outward
+    this.position.y -= 0.005;
+    this.position.x += (Math.random() - 0.5) * 0.002;
+    this.position.z += (Math.random() - 0.5) * 0.002;
+    
+    this.mesh.position.set(this.position.x, this.position.y, this.position.z);
+  }
+  
+  isDead() {
+    return this.life <= 0;
   }
 }
 

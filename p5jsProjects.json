@@ -1,0 +1,604 @@
+[
+  {
+    "name": "Genetic Path Finding",
+    "emoji": "🧬",
+    "description": [
+      "Generates lots of agents with random moves. The ones with the best fitness are used to generate more agents to learn a path."
+    ],
+    "id": "genetic",
+    "src": "genetic.gif",
+    "href": "https://giphy.com/embed/d27oC1jjwGfQhPbWJI",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "DJ Visualizer",
+    "emoji": "🎧",
+    "description": [
+      ", - halves bpm, . - doubles bpm, [ ] - shifts color theme, 1-4 - toggle effects, arrows - change bpm, spacebar - tap to learn BPM"
+    ],
+    "id": "dj_vis",
+    "video": "j-UYMUW4Ehw",
+    "href": "https://giphy.com/embed/1Koln3SN5uLmwNFdxu",
+    "date": "2022-06-30"
+  },
+  {
+    "name": "Maze path finder",
+    "emoji": "🧩",
+    "description": [
+      "Generates random maze and uses BFS to make sure there is a path possible between them then visualizes how it searches the graph until it finds a path from the start point to the end point"
+    ],
+    "id": "maze_solver",
+    "href": "https://giphy.com/embed/K6xPbwxUA3Ib7JB83y",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Text Display",
+    "emoji": "🖋️",
+    "description": [
+      "I was inspired to make something cute for displaying tiktok names on live or just any text in an interesting way"
+    ],
+    "id": "names",
+    "href": "https://giphy.com/embed/YRKybvHrPpVMcNt44z",
+    "date": "2023-04-24"
+  },
+  {
+    "name": "Langton's Ant",
+    "emoji": "🐜",
+    "description": [
+      "A large matrix where we can simulate Langton's Ant that has the simple rules: if white turn left, if black turn right"
+    ],
+    "id": "ant",
+    "href": "https://giphy.com/embed/EwyhrR0Oy9Z9j6sTII",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Conways Game of Life",
+    "emoji": "🌱",
+    "description": ["With a twist, you can reverse the direction of time"],
+    "id": "conway",
+    "href": "https://giphy.com/embed/5vCmRwwqYlosjyWfNg",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "PID Control",
+    "emoji": "⚙️",
+    "description": [
+      "PID stands for proportional integral derivative which is a controller that will try to reach a state this interaction lets you change the constants and goal state"
+    ],
+    "id": "PID",
+    "href": "https://giphy.com/embed/nof9LToV001nxDPF3z",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Hearts <3",
+    "emoji": "💖",
+    "description": ["Randomized heart animations for my love"],
+    "id": "hearts",
+    "href": "https://giphy.com/embed/n1jqKaHxYNOxhorWAe",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Sheps :)",
+    "emoji": "😘",
+    "description": ["What it is like to kiss with my girlfriend"],
+    "id": "sheps",
+    "href": "https://giphy.com/embed/nKqTRiYPU25FeOgUkF",
+    "date": "2023-04-24"
+  },
+  {
+    "name": "Triangles.",
+    "emoji": "🔺",
+    "description": ["Random triangles popping up on your screen!"],
+    "id": "triangles",
+    "href": "https://giphy.com/embed/WuPjfhrDs1vev9YAcA",
+    "date": "2021-08-08"
+  },
+  {
+    "name": "PID Race car",
+    "emoji": "🏎️",
+    "description": [
+      "Small simulation with a car that uses PID to follow a wall. Click and drag to add obstacles"
+    ],
+    "id": "race car",
+    "href": "https://giphy.com/embed/tBzDKntjdBAfjbWx8S",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Base Calculator",
+    "emoji": "🔢",
+    "description": [
+      "Add number, its base A, and target base B this will convert the number from base A to base B"
+    ],
+    "id": "baseConverter",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Dopler Effect Simulation",
+    "emoji": "🌊",
+    "description": [
+      "Dopler effect is the effect of having waves in motion this shows different vizualizations you can use"
+    ],
+    "id": "dopler",
+    "href": "https://giphy.com/embed/OfUeRS9mz5yXBEQSpj",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Stopwatch",
+    "emoji": "⏱️",
+    "description": ["Colorful stopwatch"],
+    "id": "timer",
+    "href": "https://giphy.com/embed/g0ducfLbYqo4TZNKLW",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Selection Sort",
+    "emoji": "🟦",
+    "description": [
+      "Sorting algorithm that picks the next best item to sort O(n²), Ω(n²)"
+    ],
+    "id": "selection",
+    "href": "https://giphy.com/embed/o63QTCDLcfVo37KwQ7",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Insertion Sort",
+    "emoji": "🔀",
+    "description": [
+      "Sorting algorithm that swaps items until they are in the right place O(n²), Ω(n)"
+    ],
+    "id": "insertion",
+    "href": "https://giphy.com/embed/2kvALN313dVwkGruoQ",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Merge Sort",
+    "emoji": "🧩",
+    "description": [
+      "Sorting algorithm that uses divide and conquer to sort smaller problems and combine them to sort an array O(n²)"
+    ],
+    "id": "mergeSort",
+    "href": "https://giphy.com/embed/g3Lv6zsFpXxQpCHV9l",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Lissajous Generator",
+    "emoji": "⭕",
+    "description": [
+      "Lissajous created by using circles with different periods"
+    ],
+    "id": "lissajous",
+    "href": "https://giphy.com/embed/HuLtZMMxuqlNrTkgbd",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Flappy Bird",
+    "emoji": "🐦",
+    "description": ["Remake of Flappy Bird, press space to jump"],
+    "id": "flappyBird",
+    "href": "https://giphy.com/embed/MusChV7t5hxNjVVLhG",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Asteroids",
+    "emoji": "🪐",
+    "description": [
+      "Remake of Asteroids, use arrow keys to more space to shoot"
+    ],
+    "id": "rocket",
+    "href": "https://giphy.com/embed/MlJzsgXyVbh9iLR7Lt",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Drunk Walk",
+    "emoji": "🍺",
+    "description": ["Shows brownian motion and the path the agent takes"],
+    "id": "drunkWalk",
+    "href": "https://giphy.com/embed/VD17t9Pgvm03APABxc",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Particle Interaction",
+    "emoji": "⚛️",
+    "description": [
+      "Shows brownian motion with particles and allows you to see interactions"
+    ],
+    "id": "particleInteraction",
+    "href": "https://giphy.com/embed/duZY4sWwu8qN5zxPFp",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Wave Particles",
+    "emoji": "🔵",
+    "description": [
+      "Shows particles that move in circles, your mous position changes their period and their overall image"
+    ],
+    "id": "spinParticles",
+    "href": "https://giphy.com/embed/eXfMeLyJAdjXuoMCTU",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Angle PID",
+    "emoji": "🎯",
+    "description": [
+      "Test your agility! Dodge as three turrets use advanced PID control to target and hit your cursor. Can you outmaneuver them and survive?"
+    ],
+    "id": "anglePID",
+    "href": "https://giphy.com/embed/1cuKntmipdD0FKFLze",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Calculator",
+    "emoji": "🧮",
+    "description": ["Simple arithmetic calculator"],
+    "id": "calculator",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Bar Visualization",
+    "emoji": "🟩",
+    "description": ["Simple metronome for 4 beat counts"],
+    "id": "barVis",
+    "href": "https://giphy.com/embed/rlv8vF1Ipi1Ta6BJD2",
+    "date": "2023-04-24"
+  },
+  {
+    "name": "Platformer",
+    "emoji": "🌋",
+    "description": ["Platformer game to escape the lava!"],
+    "id": "platformer",
+    "href": "https://giphy.com/embed/7oEakeAK9NDKcmoDCY",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Pretty Pendulums",
+    "emoji": "🎠",
+    "description": ["Tried to replicate pretty pendulums from tiktok"],
+    "id": "pendulums",
+    "href": "https://giphy.com/embed/ti5IN7nUIZrfBv1IEU",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Chaos Pendulums",
+    "emoji": "🔄",
+    "description": ["10 chaos pendulums and a movement path for each"],
+    "id": "chaos_pendulum",
+    "href": "https://giphy.com/embed/kD9dLwwFqgkTqPQQzo",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Colors",
+    "emoji": "🎨",
+    "description": ["Edit these colors with math!"],
+    "id": "colors",
+    "href": "https://giphy.com/embed/nihwA289LX0cFFBDmO",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Simulations",
+    "emoji": "🎲",
+    "description": [
+      "Generate many simulations of up or down randomness and see the disctibution at the end!"
+    ],
+    "id": "simulations",
+    "href": "https://giphy.com/embed/x573fMQKeTqh50sm56",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "COVID Simulations",
+    "emoji": "🦠",
+    "description": [
+      "A simulation of infections where one can change the infection, recovery, and creation rates"
+    ],
+    "id": "simulations2D",
+    "href": "https://www.giphy.com/gifs/hCgFIbHQ1P9QYFN64Y",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Rocket Orbit",
+    "emoji": "🚀",
+    "description": ["A rocket that you can control orbiting around a sun!"],
+    "id": "orbit",
+    "href": "https://giphy.com/embed/xl3Mc7VBo0vZxndJCG",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Snake",
+    "emoji": "🐍",
+    "description": ["This snake game will always win!"],
+    "id": "snake",
+    "href": "https://giphy.com/embed/TJ9KlmZ2TflJxllNgb",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "SIN/COS simulation!",
+    "emoji": "➰",
+    "description": ["This demonstration shows how sin and cos are related!"],
+    "id": "cos",
+    "href": "https://giphy.com/embed/rXleKkOaDgolnxaKO2",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Roomba algorithm",
+    "emoji": "🤖",
+    "description": [
+      "This is a simple line drawing robot, I tried to replicate how the roomba moves"
+    ],
+    "id": "roomba",
+    "href": "https://giphy.com/embed/bJez5TwRoZudrfBX9W",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Love Hate",
+    "emoji": "💕",
+    "description": ["A special dance between love and hate, shown with two sin waves"],
+    "id": "lovehate",
+    "href": "https://giphy.com/embed/4QvL03ITnHDOlqqYR1",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Leslie",
+    "emoji": "💏",
+    "description": ["A love story seen from above"],
+    "id": "leslie",
+    "href": "https://giphy.com/embed/3azIbCRsTEtVhWWEyF",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Joseph Albers",
+    "emoji": "▧",
+    "description": ["Joseph Albers inspired digital art."],
+    "id": "josephAlbers",
+    "href": "https://giphy.com/embed/pWPszGOhnwVh8Mg76m",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Simple Art",
+    "emoji": "🖼️",
+    "description": ["Inspired by the Museum of Modern Art San Fransisco."],
+    "id": "simpleArt",
+    "href": "https://giphy.com/embed/5nnxdroX2lm4iLvCnc",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Sin Words",
+    "emoji": "🌊",
+    "description": ["Just a cool way to show words moving in a sin wave"],
+    "id": "sin_words",
+    "href": "https://giphy.com/embed/pB0NbkebsIAXYQcjBM",
+    "date": "2023-10-14"
+  },
+  {
+    "name": "Pointer",
+    "emoji": "🖱️",
+    "description": ["Cool way to emphasize the cursor"],
+    "id": "pointer",
+    "href": "https://giphy.com/embed/wl9eZLRtmgE6lNkHlZ",
+    "date": "2021-01-30"
+  },
+  {
+    "name": "Graffitti",
+    "emoji": "🧱",
+    "description": ["Brick graffitti maker!"],
+    "id": "graffiti",
+    "href": "https://giphy.com/embed/3FNUFncpOTFSCPgaHt",
+    "date": "2024-04-10"
+  },
+  {
+    "name": "Fireworks",
+    "emoji": "🎆",
+    "description": ["Toggle your firework show!"],
+    "id": "fireworks",
+    "href": "https://giphy.com/embed/mcvjed6xNz6xusR95a",
+    "date": "2024-04-24"
+  },
+  {
+    "name": "Turtles all the way down!",
+    "emoji": "🐢",
+    "description": ["Do we have free will?"],
+    "id": "turtles",
+    "href": "https://giphy.com/embed/SjgWeyFOx0uSIQYpv6",
+    "date": "2024-05-02"
+  },
+  {
+    "name": "Get bigger after every collision",
+    "emoji": "⚽",
+    "description": [
+      "I made the tiktok video where the ball gets bigger after every collision"
+    ],
+    "id": "bumpBigger",
+    "href": "https://giphy.com/embed/rhYDjtLYQSkUUKID3E",
+    "date": "2024-05-12"
+  },
+  {
+    "name": "3D Cubes",
+    "emoji": "🧊",
+    "description": ["test project to learn webgl in p5"],
+    "id": "3dcubes",
+    "href": "https://giphy.com/embed/5Mmbqe39nduWnlt7HA",
+    "date": "2024-05-19"
+  },
+  {
+    "name": "Towers of Hanoi!",
+    "emoji": "🗼",
+    "description": ["Recursion at its finest"],
+    "id": "hanoi",
+    "href": "https://giphy.com/embed/U6MGXaoobKQ0iOr3dG",
+    "date": "2024-06-09"
+  },
+  {
+    "name": "Star Wars Hyper Drive!",
+    "emoji": "🌌",
+    "description": [
+      "What it feels like to be in the millenium falcon and hit hyperdrive"
+    ],
+    "id": "starwars",
+    "href": "https://giphy.com/embed/OsG3kWnZn7DjnlUT9Y",
+    "date": "2024-06-20"
+  },
+  {
+    "name": "Universal Entity",
+    "emoji": "🌠",
+    "description": [
+      "Rozzi Roomian inspired art. What it feels to be in the universe. My interpretation: What it feels like to be god."
+    ],
+    "id": "universal",
+    "href": "https://giphy.com/embed/Fggo9nTETtZ407hoA8",
+    "date": "2024-06-21"
+  },
+  {
+    "name": "PI estimation",
+    "emoji": "π",
+    "description": [
+      "Generate random points and check if they lie within a circle, use this to approximate PI"
+    ],
+    "id": "pi_graph",
+    "href": "https://giphy.com/embed/SR6VqebMz6zuIRBE8o",
+    "date": "2024-07-30"
+  },
+  {
+    "name": "Mandelbrot Set Explorer",
+    "emoji": "🌀",
+    "description": ["See this simple and complex mathematical wonder!"],
+    "id": "mandelbrot",
+    "href": "https://giphy.com/embed/SRl8VF0XjpgRR7U2FZ",
+    "date": "2024-08-19"
+  },
+  {
+    "name": "Three Body Problem",
+    "emoji": "🌒",
+    "description": [
+      "An un solvable problem. How do you create a stable orbit with 3 objects of roughly the same size? Turns out you cant."
+    ],
+    "id": "three_body",
+    "href": "https://giphy.com/embed/WrALL9lo7XJ9IoBHZN",
+    "date": "2024-09-06"
+  },
+  {
+    "name": "Linear Regression",
+    "emoji": "📈",
+    "description": [
+      "Use least squares to find a line that can make a linear regression of some points I generate!"
+    ],
+    "id": "linear_regression",
+    "href": "https://giphy.com/embed/8WlTq81B1W43pXWgOl",
+    "date": "2024-09-06"
+  },
+  {
+    "name": "Draw Classifier",
+    "emoji": "✍️",
+    "description": [
+      "Draw an image and press C to see what the image classifiers guess for what it is. Disclaimer this is pretty bad."
+    ],
+    "id": "draw_classify",
+    "href": "https://giphy.com/embed/vqOcsoENrWDMVzWa0y",
+    "date": "2024-09-06"
+  },
+  {
+    "name": "Image Classifier",
+    "emoji": "🖼️",
+    "description": [
+      "Upload an image and see what the image classifiers guess for what it is."
+    ],
+    "id": "image_classify",
+    "href": "https://giphy.com/embed/NtSHnY9nXlj1BjCbYt",
+    "date": "2024-09-06"
+  },
+  {
+    "name": "Circle Bounce Music",
+    "emoji": "🎶",
+    "description": [
+      "Ball bounces and every bounce it plays twinkle twinkle little star aye"
+    ],
+    "id": "music_bounce",
+    "href": "https://giphy.com/embed/aYDnUgweHO9SPL0U5B",
+    "date": "2024-09-06"
+  },
+  {
+    "name": "Theramin",
+    "emoji": "🎻",
+    "description": [
+      "Use your hand position to change the freqency of the instrument!"
+    ],
+    "id": "theramin",
+    "href": "https://giphy.com/embed/NDgqCApijP3ghU4vql",
+    "redirect": true,
+    "date": "2024-09-06"
+  },
+  {
+    "name": "Smile Fireworks",
+    "emoji": "😄",
+    "description": [
+      "When you smile CV detects your smile and gives you a fireworks show, my cheeks hurt from smiling so much!"
+    ],
+    "id": "smile_fireworks",
+    "href": "https://giphy.com/embed/XlWl4jew4qbAJS1QS8",
+    "redirect": true,
+    "date": "2024-10-15"
+  },
+  {
+    "name": "Sisyphus",
+    "emoji": "🪨",
+    "description": [
+      "Help Sisyphus push his boulder up the mountain, only for it to roll back down again. A metaphor for the human condition."
+    ],
+    "id": "sisyphus",
+    "href": "https://giphy.com/embed/UH3DqxA6yqyLewi2nD",
+    "date": "2024-12-07"
+  },
+  {
+    "name": "3D Pipes Screensaver",
+    "emoji": "🔗",
+    "description": [
+      "A 3D recreation of the classic Windows pipes screensaver. Watch as colorful pipes grow and wind their way through 3D space."
+    ],
+    "id": "pipes3D",
+    "href": "https://giphy.com/embed/TmvUwF0MJ4bIBVRskQ",
+    "timeout": 10,
+    "date": "2024-12-08"
+  },
+  {
+    "name": "Windows Ball Morph",
+    "emoji": "🧊",
+    "description": [
+      "A 3D morphing cube with colored faces that bounces around the screen, inspired by classic Windows screensavers. Watch as the cube transforms and rotates while bouncing off invisible boundaries."
+    ],
+    "id": "windows_ball_morph",
+    "date": "2025-06-06"
+  },
+  {
+    "name": "NEAT Racing Game",
+    "emoji": "🏁",
+    "description": [
+      "Cars evolve using neural networks to navigate a race track. Watch as AI cars learn to drive through generations of evolution using the NEAT algorithm."
+    ],
+    "id": "neat_racetrack",
+    "date": "2025-06-05"
+  },
+  {
+    "name": "Pulse Concentric",
+    "emoji": "🎯",
+    "description": [
+      "Concentric circles pulse outward from the center with customizable frequency, growth speed, and rainbow colors. Control the visual parameters with interactive sliders and color checkboxes."
+    ],
+    "id": "pulse_concentric",
+    "date": "2025-06-08"
+  },
+  {
+    "name": "Butterfly Swarm",
+    "emoji": "🦋",
+    "description": [
+      "3D animated red butterflies with shimmering white star dust trails. Watch hundreds of butterflies float upward leaving magical particle effects."
+    ],
+    "id": "butterflies",
+    "date": "2025-06-07"
+  },
+  {
+    "name": "Vector Field",
+    "emoji": "🧲",
+    "description": [
+      "Dynamic arrow grid that points toward your cursor, creating beautiful vector field visualizations. Adjust grid density with the slider for different effects."
+    ],
+    "id": "field",
+    "date": "2025-10-21"
+  }
+]

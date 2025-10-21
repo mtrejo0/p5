@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .project-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        .project-emoji {
+            font-size: 1.4em;
+            margin-right: 0.25em;
+        }
+        
+        .project-description {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+        
+        .project-date {
+            color: #999;
+            font-size: 0.85em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ p5.js Projects ✨</h1>
+        
+        <div class="projects-grid" id="projectsGrid">
+            <div class="loading">Loading projects...</div>
+        </div>
+    </div>
+    
+    <script>
+        // Load projects from JSON
+        fetch('p5jsProjects.json')
+            .then(response => response.json())
+            .then(projects => {
+                const grid = document.getElementById('projectsGrid');
+                grid.innerHTML = ''; // Clear loading message
+                
+                // Sort projects by date (newest first)
+                projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                projects.forEach(project => {
+                    const card = document.createElement('a');
+                    card.className = 'project-card';
+                    card.href = `${project.id}/`;
+                    
+                    const title = document.createElement('div');
+                    title.className = 'project-title';
+
+                    // Insert emoji if available
+                    if (project.emoji) {
+                        const emojiSpan = document.createElement('span');
+                        emojiSpan.className = 'project-emoji';
+                        emojiSpan.textContent = project.emoji;
+                        title.appendChild(emojiSpan);
+                    }
+
+                    const titleText = document.createElement('span');
+                    titleText.textContent = project.name;
+                    title.appendChild(titleText);
+                    
+                    const description = document.createElement('div');
+                    description.className = 'project-description';
+                    description.textContent = Array.isArray(project.description) 
+                        ? project.description.join(' ') 
+                        : project.description;
+                    
+                    const date = document.createElement('div');
+                    date.className = 'project-date';
+                    date.textContent = new Date(project.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    
+                    card.appendChild(title);
+                    card.appendChild(description);
+                    card.appendChild(date);
+                    
+                    grid.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading projects:', error);
+                document.getElementById('projectsGrid').innerHTML = 
+                    '<div class="loading">Error loading projects. Please try again.</div>';
+            });
+    </script>
+</body>
+</html>
+
