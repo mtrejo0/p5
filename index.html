@@ -99,8 +99,8 @@
     </div>
     
     <script>
-        // Load projects from JSON
-        fetch('p5jsProjects.json')
+        // Load projects from JSON (local file)
+        fetch('./p5jsProjects.json')
             .then(response => response.json())
             .then(projects => {
                 const grid = document.getElementById('projectsGrid');
