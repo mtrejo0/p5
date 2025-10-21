@@ -593,6 +593,15 @@
     "date": "2025-06-07"
   },
   {
+    "name": "Golden Ratio Spiral",
+    "emoji": "📐",
+    "description": [
+      "Watch Fibonacci squares grow in a perfect spiral! Press SPACE to add the next square, R to reset, and use +/- to zoom as you visualize the golden ratio in action."
+    ],
+    "id": "golden_ratio_spiral",
+    "date": "2025-10-21"
+  },
+  {
     "name": "Vector Field",
     "emoji": "🧲",
     "description": [
