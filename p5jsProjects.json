@@ -611,6 +611,15 @@
     "date": "2025-10-21"
   },
   {
+    "name": "Color Grid War",
+    "emoji": "⚫⚪",
+    "description": [
+      "A black and white color grid is split down the middle. Two bouncing balls collide with the boundary and convert blocks to their side's color, struggling for control of the entire grid."
+    ],
+    "id": "color_grid_war",
+    "date": "2025-10-21"
+  },
+  {
     "name": "Vector Field",
     "emoji": "🧲",
     "description": [
