@@ -211,18 +211,11 @@ function drawInfo() {
   textAlign(LEFT, TOP);
   textSize(16);
   const lines = [
-    `Points: ${points.length}`,
-    `Current Path Length: ${currentDistance.toFixed(2)}`,
     `Best Path Length: ${bestDistance.toFixed(2)}`,
-    `Status: ${isRunning ? 'Optimizing…' : 'Paused'}`,
-    'Controls:',
-    ' - Play/Pause to start or stop optimizing',
-    ' - Reshuffle Path to randomize order',
-    ' - Regenerate Points for new locations',
   ];
   const lineHeight = 20;
   lines.forEach((line, idx) => {
-    text(line, 20, 20 + idx * lineHeight);
+    text(line, 20, 5 + idx * lineHeight);
   });
 }
 
