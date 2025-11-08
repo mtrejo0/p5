@@ -636,5 +636,14 @@
     ],
     "id": "travelling_salesman",
     "date": "2025-10-21"
+  },
+  {
+    "name": "Graph Coloring",
+    "emoji": "🎨",
+    "description": [
+      "Generate a random graph and watch a backtracking solver color it in real time. Pause, resume, and tweak the node count to see how complexity changes."
+    ],
+    "id": "graph_coloring",
+    "date": "2025-11-08"
   }
 ]
