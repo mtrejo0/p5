@@ -627,5 +627,14 @@
     ],
     "id": "field",
     "date": "2025-10-21"
+  },
+  {
+    "name": "Travelling Salesman",
+    "emoji": "🧭",
+    "description": [
+      "Interactive travelling salesman visualization using a 2-opt heuristic. Watch the path shorten in real time, reshuffle the route, or regenerate random points."
+    ],
+    "id": "travelling_salesman",
+    "date": "2025-10-21"
   }
 ]

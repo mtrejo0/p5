@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelling Salesman</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #0f0f0f;
+        color: #f0f0f0;
+        font-family: sans-serif;
+      }
+
+      #ui {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background: #4a90e2;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      button:hover {
+        background: #357abd;
+      }
+
+      #ui label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #f0f0f0;
+        font-size: 14px;
+      }
+
+      #ui input {
+        width: 80px;
+        padding: 6px 8px;
+        border-radius: 4px;
+        border: 1px solid #4a90e2;
+        background: #1e1e1e;
+        color: #f0f0f0;
+        font-size: 14px;
+      }
+
+      #ui input:focus {
+        outline: 2px solid #4a90e2;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+  </head>
+
+  <body>
+    <div id="ui"></div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
+
+
