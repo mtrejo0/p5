@@ -645,5 +645,14 @@
     ],
     "id": "graph_coloring",
     "date": "2025-11-07"
+  },
+  {
+    "name": "Emoji Zombie Survivor",
+    "emoji": "🧟",
+    "description": [
+      "Survive waves of emoji zombies. WASD to move, aim with the mouse and click to shoot. 🔫 pickups drift in—catch them for ammo; the ring hints when the next pickup is coming."
+    ],
+    "id": "emoji_zombie_survivor",
+    "date": "2026-03-19"
   }
 ]
