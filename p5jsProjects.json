@@ -690,5 +690,14 @@
     ],
     "id": "star-morph",
     "date": "2026-03-21"
+  },
+  {
+    "name": "Eyes Closed",
+    "emoji": "👁️",
+    "description": [
+      "6 cylinders arranged in a hexagon with twisted red net spirals on black surfaces. Drag to look around from inside the formation."
+    ],
+    "id": "eyes-closed",
+    "date": "2026-03-21"
   }
 ]
