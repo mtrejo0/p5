@@ -662,7 +662,7 @@
       "30 neon-colored lines spawn at random positions, rotating at different speeds. Each line leaves a fading 10-frame trail as it spins."
     ],
     "id": "neon-spinners",
-    "date": "2026-03-20"
+    "date": "2026-03-21"
   },
   {
     "name": "Dust Pulse",
@@ -671,7 +671,7 @@
       "15,000 blue particles fill the screen like dust. Click to send a pulse, drag to push them like a finger through water. Particles repel each other and bounce off walls."
     ],
     "id": "dust-pulse",
-    "date": "2026-03-20"
+    "date": "2026-03-21"
   },
   {
     "name": "Space Explorer",
@@ -680,7 +680,7 @@
       "Fly a rocket through procedurally generated space. WASD or arrow keys to move, space to shoot. Dodge fast red enemies and blue turrets that shoot back. Destroy obstacles in your path."
     ],
     "id": "space-explorer",
-    "date": "2026-03-20"
+    "date": "2026-03-21"
   },
   {
     "name": "Star Morph",
@@ -689,6 +689,6 @@
       "20 neon star polygons (pentagrams, hexagrams, heptagrams, octagrams) with dots tracing their outlines, bouncing around the screen."
     ],
     "id": "star-morph",
-    "date": "2026-03-20"
+    "date": "2026-03-21"
   }
 ]
