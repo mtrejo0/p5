@@ -681,5 +681,14 @@
     ],
     "id": "space-explorer",
     "date": "2026-03-20"
+  },
+  {
+    "name": "Star Morph",
+    "emoji": "✡",
+    "description": [
+      "20 neon star polygons (pentagrams, hexagrams, heptagrams, octagrams) with dots tracing their outlines, bouncing around the screen."
+    ],
+    "id": "star-morph",
+    "date": "2026-03-20"
   }
 ]
