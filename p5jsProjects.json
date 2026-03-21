@@ -663,5 +663,14 @@
     ],
     "id": "neon-spinners",
     "date": "2026-03-20"
+  },
+  {
+    "name": "Dust Pulse",
+    "emoji": "✨",
+    "description": [
+      "15,000 blue particles fill the screen like dust. Click to send a pulse, drag to push them like a finger through water. Particles repel each other and bounce off walls."
+    ],
+    "id": "dust-pulse",
+    "date": "2026-03-20"
   }
 ]
