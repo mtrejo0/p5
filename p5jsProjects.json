@@ -672,5 +672,14 @@
     ],
     "id": "dust-pulse",
     "date": "2026-03-20"
+  },
+  {
+    "name": "Space Explorer",
+    "emoji": "🚀",
+    "description": [
+      "Fly a rocket through procedurally generated space. WASD or arrow keys to move, space to shoot. Dodge fast red enemies and blue turrets that shoot back. Destroy obstacles in your path."
+    ],
+    "id": "space-explorer",
+    "date": "2026-03-20"
   }
 ]
