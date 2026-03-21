@@ -654,5 +654,14 @@
     ],
     "id": "emoji_zombie_survivor",
     "date": "2026-03-19"
+  },
+  {
+    "name": "Neon Spinners",
+    "emoji": "💫",
+    "description": [
+      "30 neon-colored lines spawn at random positions, rotating at different speeds. Each line leaves a fading 10-frame trail as it spins."
+    ],
+    "id": "neon-spinners",
+    "date": "2026-03-20"
   }
 ]
